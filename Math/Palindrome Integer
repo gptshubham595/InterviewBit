@@ -54,3 +54,14 @@ bool Solution::isPalindrome(int n) {
     if(res==n) return 1;
     return 0;
 }
+
+//Solution 2: by reversing the integer
+
+bool Solution::isPalindrome(int n) {
+    if(n<0)return 0;
+    string s,t;
+    s=t=to_string(n);
+    reverse(s.begin(),s.end());
+    return s==t;
+}
+
